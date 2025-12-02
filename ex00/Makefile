@@ -6,7 +6,7 @@
 #    By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/01 19:39:18 by ghambrec          #+#    #+#              #
-#    Updated: 2025/12/02 11:20:01 by ghambrec         ###   ########.fr        #
+#    Updated: 2025/12/02 11:28:27 by ghambrec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,4 +61,7 @@ debug: $(NAME)
 run: $(NAME)
 	./$(NAME)
 
-.PHONY: all clean fclean re run
+valgrind: fclean debug
+	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all ./$(NAME)
+
+.PHONY: all clean fclean re run debug valgrind
