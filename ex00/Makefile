@@ -6,13 +6,15 @@
 #    By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/01 19:39:18 by ghambrec          #+#    #+#              #
-#    Updated: 2025/12/01 20:02:04 by ghambrec         ###   ########.fr        #
+#    Updated: 2025/12/02 11:20:01 by ghambrec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # compiling stuff
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -O2
+FLAG_OPTIMIZING = -O2
+FLAG_DEBUG = -g -O0
 
 # header files
 INCLUDE = ./inc
@@ -32,6 +34,7 @@ SRCS =	main.cpp \
 OBJ_DIR = obj
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
+all: CXXFLAGS += $(FLAG_OPTIMIZING)
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -51,6 +54,9 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+debug: CXXFLAGS += $(FLAG_DEBUG)
+debug: $(NAME)
 
 run: $(NAME)
 	./$(NAME)
