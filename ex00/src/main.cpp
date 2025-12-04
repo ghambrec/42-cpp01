@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:02:35 by ghambrec          #+#    #+#             */
-/*   Updated: 2025/12/01 20:31:49 by ghambrec         ###   ########.fr       */
+/*   Updated: 2025/12/04 16:57:14 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ int main(void)
 	z->announce();
 	randomChump("foo");
 	delete z;
-	return (EXIT_SUCCESS);
+	return (0);
 }

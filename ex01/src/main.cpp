@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:02:35 by ghambrec          #+#    #+#             */
-/*   Updated: 2025/12/02 12:27:00 by ghambrec         ###   ########.fr       */
+/*   Updated: 2025/12/04 16:57:05 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int main(void)
 		horde[i].announce();
 	}
 	delete[] horde;
-	return (EXIT_SUCCESS);
+	return (0);
 }
