@@ -3,3 +3,6 @@ obj/
 zombie
 brian
 fight
+sed
+ex04/text.txt
+ex04/*.replace
