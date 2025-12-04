@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 12:51:19 by ghambrec          #+#    #+#             */
-/*   Updated: 2025/12/02 13:10:50 by ghambrec         ###   ########.fr       */
+/*   Updated: 2025/12/04 14:59:21 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 class HumanB
 {
 	private:
-		Weapon		w_;
 		std::string	name_;
+		Weapon		*w_;
 	
 	public:
 		HumanB() = delete;
 		HumanB(std::string name);
 		~HumanB();
 		void attack(void);
-		void setWeapon(Weapon w);
+		void setWeapon(Weapon &w);
 };
