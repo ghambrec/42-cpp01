@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 15:06:18 by ghambrec          #+#    #+#             */
-/*   Updated: 2025/12/04 16:47:25 by ghambrec         ###   ########.fr       */
+/*   Updated: 2025/12/08 13:46:23 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int	main(int argc, char **argv)
 	std::ofstream outfile(filename + ".replace");
 	if (!outfile.is_open())
 	{
+		infile.close();
 		std::cerr << "Unable to open output file!\n";
 		return (1);
 	}
